@@ -2,425 +2,197 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rajendra Narayan Sahoo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajendra Narayan Sahoo - Portfolio</title>
 
-    <link rel="icon" type="image/png" sizes="512x512" href="obs.jpeg">
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-   
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem;
-}
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 0;
-}
-
-header p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-}
-
-section {
-    padding: 2rem;
-}
-
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-section ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-section ul li {
-    margin-bottom: 1rem;
-}
-
-section ul li h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-section ul li ul {
-    margin-left: 2rem;
-}
-
-section ul li ul li {
-    margin-bottom: 0.25rem;
-}
-
-section#contact {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem;
-}
-
-section#contact p {
-    margin-bottom: 2rem;
-}
-
-section#contact a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section#contact a:hover {
-    text-decoration: underline;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-ul li {
-    position: relative;
-    transition: all 0.3s ease-in-out;
-}
-
-ul li:hover {
-    transform: translateY(-5px);
-}
-
-ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-ul li:hover::before {
-    transform: scaleX(1);
-}
-
-
-
-.project {
-    flex-basis: calc(33.33% - 2rem);
-    margin-bottom: 2rem;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-}
-
-.project a{
-    text-decoration: none;
-}
-
-.project h3 {
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-.project p {
-    padding: 1rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-#contact {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#contact ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-#contact li {
-    margin: 0 1rem;
-}
-
-#contact a {
-    display: block;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-#contact a:hover {
-    transform: translateY(-5px);
-}
-
-#contact i {
-    margin-right: 1rem;
-    font-size: 1.5rem;
-    vertical-align: middle;
-}
-
-#contact span {
-    font-size: 1.2rem;
-    vertical-align: middle;
-}
-
-#skills {
-    background-color: #f4f4f4;
-    padding: 2rem;
-  }
-  
-  #skills h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  #skills ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #skills li {
-    flex: 1;
-    margin-right: 1rem;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  #skills li:last-child {
-    margin-right: 0;
-  }
-  
-  #skills li h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  #skills li ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  #skills li ul li {
-    flex: 1 0 20%;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    background-color: #444;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  #skills li ul li:last-child {
-    margin-right: 0;
-  }
-  
-  #skills li:hover {
-    transform: translateY(-5px);
-  }
-  
-  #skills li ul li:hover {
-    transform: translateY(-5px);
-  }
-
-  
-
-
-    </style>
-
+    <!-- Font Awesome Icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <div class="hero-content">
-                <h1>Welcome</h1>
-                <h1>Hi, I'm Rajendra Narayan Sahoo</h1>
-                <p>Java Full Stack Software Developer</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Rajendra Narayan Sahoo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-4">Welcome</h1>
+            <h1 class="display-1">Hi, I'm Rajendra Narayan Sahoo</h1>
+            <p class="lead">Java Full Stack Software Developer</p>
         </div>
     </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am Rajendra Narayan Sahoo, a passionate software engineer trainee with a strong foundation in design and
-            problem-solving. I have experience working on HRMS project, integrating modules like policy type,
-            reimbursement, and asset management. I am familiar with writing APIs and testing them using Postman. I have
-            completed a Java Full Stack Trainee program, gaining expertise in core Java, Spring Boot, Hibernate ORM, and
-            MySQL. I have worked on mini-projects like Restaurant Reservation System and Online Banking System. I hold a
-            Master of Computer Application and B.sc(ITM) degrees. I have achieved several certifications, including
-            Google IT certification from Coursera and intermediate certification in MySQL on the Hacker Rank platform. I
-            am looking to start my career as an entry-level software engineer with a reputed firm driven by technology.
-        </p>
-        
-    </section>
-    
-    <section id="projects">
-        <div><h2>Projects  </h2></div>
-        <div class="project"> 
-            <a target="_blank" href="https://github.com/Rnarayan1/project_s.c.m_bakery_product">
-                <!-- <img src="scm.jpeg" alt="Project 1"> -->
-                <h3>Supply Chain management</h3>
-                <p>TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY PHP MYSQL</p>
-                
-            
-            </a>
-        </div>
-        <div class="project">
-            <a target="_blank" href="https://github.com/Rnarayan1/Restaurant-Reservation">
-                <!-- <img src="res.jpeg" alt="Project 2"> -->
-                <h3>Restaurant Reservation</h3>
-                <p>TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY JSP SERVLET JDBC MYSQL</p>
-            </a>
-        </div>
-        <div class="project">
-            <a target="_blank" href="https://github.com/Rnarayan1/online-banking-operation">
-                <!-- <img src="obs.jpeg" alt="Project 3"> -->
-                <h3>Online Banking Operation</h3>
-                <p>TECHNOLOGY USED : SPRING BOOT ORM(HIBERNATE) THYMLEAF MYSQL</p>
-            </a>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="display-4 mb-4">About Me</h2>
+                    <p>
+                        I am Rajendra Narayan Sahoo, a passionate software engineer trainee with a strong foundation
+                        in design and problem-solving. I have experience working on HRMS project, integrating modules
+                        like policy type, reimbursement, and asset management. I am familiar with writing APIs and
+                        testing them using Postman. I have completed a Java Full Stack Trainee program, gaining
+                        expertise in core Java, Spring Boot, Hibernate ORM, and MySQL. I have worked on mini-projects
+                        like Restaurant Reservation System and Online Banking System. I hold a Master of Computer
+                        Application and B.sc(ITM) degrees. I have achieved several certifications, including Google IT
+                        certification from Coursera and intermediate certification in MySQL on the Hacker Rank
+                        platform. I am looking to start my career as an entry-level software engineer with a reputed
+                        firm driven by technology.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Add an image or any other content you want to display -->
+                    <!-- <img src="IMG_2263.JPG" alt="Coder Cartoon" class="img-fluid rounded"> -->
+                </div>
+            </div>
         </div>
     </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Java </li>
-                    <li>JavaScript</li>
-                    <li>C</li>
-                    <li>Web base technology (Html Css)</li>
-                </ul>
-            </li>
-            <li>
-                <h3>Frameworks</h3>
-                <ul>
-                    <li>Spring Boot</li>
-                    <li>Angular</li>
-                    <li>Bootstrap</li>
-                </ul>
-            </li>
-            <li>
-                <h3>Tools</h3>
-                <ul>
-                    <li>Git</li>
-                    <li>sts4</li>
-                    <li>Eclipse</li>
-                    <li>Postman</li>
-                    <li>Visual Studio Code</li>
-                </ul>
-            </li>
-        </ul>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Supply Chain management</h5>
+                            <p class="card-text">TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY PHP MYSQL</p>
+                            <a href="https://github.com/Rnarayan1/project_s.c.m_bakery_product" target="_blank"
+                                class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Reservation</h5>
+                            <p class="card-text">TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY JSP SERVLET JDBC
+                                MYSQL</p>
+                            <a href="https://github.com/Rnarayan1/Restaurant-Reservation" target="_blank"
+                                class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Online Banking Operation</h5>
+                            <p class="card-text">TECHNOLOGY USED : SPRING BOOT ORM(HIBERNATE) THYMLEAF MYSQL</p>
+                            <a href="https://github.com/Rnarayan1/online-banking-operation" target="_blank"
+                                class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li>
-                <a href="mailto:rajendranarayan716@gmail.com">
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Programming Languages</h5>
+                            <ul>
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                                <li>C</li>
+                                <li>Web base technology (Html Css)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Frameworks</h5>
+                            <ul>
+                                <li>Spring Boot</li>
+                                <li>Angular</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tools</h5>
+                            <ul>
+                                <li>Git</li>
+                                <li>sts4</li>
+                                <li>Eclipse</li>
+                                <li>Postman</li>
+                                <li>Visual Studio Code</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-dark text-white py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">Contact</h2>
+            <ul class="list-unstyled">
+                <li>
                     <i class="fas fa-envelope"></i>
-                    <span>rajendranarayan716@gmail.com</span>
-                </a>
-            </li>
-            <li>
-                <a href="tel:+919938800716">
+                    <span><a href="mailto:rajendranarayan716@gmail.com" class="text-white">rajendranarayan716@gmail.com</a></span>
+                </li>
+                <li>
                     <i class="fas fa-phone"></i>
                     <span>+91 9938800716</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Rnarayan1" target="_blank" rel="noopener noreferrer">
+                </li>
+                <li>
                     <i class="fab fa-github"></i>
-                    <span>github.com/Rnarayan1</span>
-                </a>
-            </li>
-        </ul>
+                    <span><a href="https://github.com/Rnarayan1" target="_blank" rel="noopener noreferrer"
+                            class="text-white">github.com/Rnarayan1</a></span>
+                </li>
+            </ul>
+        </div>
     </section>
+
+    <!-- Bootstrap JS and Optional Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
-</html>    
+</html>
