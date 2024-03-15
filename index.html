@@ -4,275 +4,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajendra Narayan Sahoo - Portfolio</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
-
+    <title>RAJAN Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Font Awesome Icons (optional) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        header {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-primary {
+            background-color: #6a11cb;
+            border-color: #6a11cb;
+        }
+
+        .btn-primary:hover {
+            background-color: #4f0d9a;
+            border-color: #4f0d9a;
+        }
+
+        .btn-secondary {
+            background-color: #2575fc;
+            border-color: #2575fc;
+        }
+
+        .btn-secondary:hover {
+            background-color: #1a5bc7;
+            border-color: #1a5bc7;
+        }
+
+        footer {
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f4f4f4;
-    }
-
-    #projects .card {
-        height: 100%;
-    }
-
-    #projects .card-body {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #projects .card-title {
-        flex-grow: 1;
-    }
-
-    #projects .btn {
-        margin-top: auto;
-    }
-
-    #projects .col-md-3 {
-        margin-bottom: 20px;
-        /* Adjust the margin as needed */
-    }
-    .list-unstyled a{
-        text-decoration: none;
-    }
-</style>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="https://rnarayan1.github.io/portfolio/">Rajendra Narayan Sahoo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+    <header class="gradient-bg">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Rajendra Narayan Sahoo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero text-center ">
-        <div class="container">
-            <p class="display-6">Java Full Stack Software Developer</p>
-        </div>
+        </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2 class="display-6 mb-4">About Me</h2>
-                    <p>
-                        A passionate software engineer trainee with a strong foundation
-                        in design and problem-solving. I have experience working on HRMS project, integrating modules
-                        like policy type, reimbursement, and asset management. I am familiar with writing APIs and
-                        testing them using Postman. I have completed a Java Full Stack Trainee program, gaining
-                        expertise in core Java, Spring Boot, Hibernate ORM, and MySQL. I have worked on mini-projects
-                        like Restaurant Reservation System and Online Banking System. I hold a Master of Computer
-                        Application and B.sc(ITM) degrees. I have achieved several certifications, including Google IT
-                        certification from Coursera and intermediate certification in MySQL on the Hacker Rank
-                        platform. I am looking to start my career as an entry-level software engineer with a reputed
-                        firm driven by technology.
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <!-- Add an image or any other content you want to display -->
-                    <!-- <img src="IMG_2263.JPG" alt="Coder Cartoon" class="img-fluid rounded"> -->
+    <main>
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>Rajendra Narayan Sahoo</h1>
+                        <h2>Software Developer</h2>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-container rounded-circle overflow-hidden">
+                            <img src="rajan1.jpg" alt="Your Photo" class="img-fluid">
+                        </div>
+
+                    </div>
+                    <div>
+                        <p>I am Rajendra Narayan Sahoo, a passionate software engineer with a strong foundation in
+                            design and
+                            problem-solving. I have experience working on HRMS project, integrating modules like policy
+                            type,
+                            reimbursement, and asset management. I am familiar with writing APIs and testing them using
+                            Postman. I have
+                            completed a Java Full Stack Trainee program, gaining expertise in core Java, Spring Boot,
+                            Hibernate ORM, and
+                            MySQL. I have worked on mini-projects like Restaurant Reservation System and Online Banking
+                            System. I hold a
+                            Master of Computer Application and B.sc(ITM) degrees. I have achieved several
+                            certifications, including
+                            Google IT certification from Coursera and intermediate certification in MySQL on the Hacker
+                            Rank platform. I
+                            am looking to start my career as an entry-level software engineer with a reputed firm driven
+                            by technology.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Internship Section -->
-    <section id="internship" class="py-5">
+        <section id="skills" class="py-5 gradient-bg text-white">
+            <div class="container">
+                <h2 class="text-center mb-4">Skills</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>Java</li>
+                            <li>Web tech (Html,Css)</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Frameworks/Libraries</h3>
+                        <ul>
+                            <li>Spring Boot</li>
+                            <li>Angular</li>
+                            <li>Spring</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h3>Tools and Technologies</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>sts4</li>
+                            <li>Postman</li>
+                            <li>Eclipse</li>
+                            <li>VSC</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Communication</li>
+                            <li>Problem-solving</li>
+                            <li>Teamwork</li>
+                            <li>Time management</li>
+                            <li>work-dedicated</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Projects</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title">Restaurant Reservation</h3>
+                                <p class="card-text">Designed and implemented a dynamic and user-friendly Restaurant
+                                    Reservation System using JSP, Servlet, and JDBC technologies.
+                                </p>
+                                <ul>
+                                    <li>TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY JSP SERVLET JDBC MYSQL</li>
+
+                                </ul>
+
+                                <a href="https://github.com/Rnarayan1/Restaurant-Reservation" target="_blank"
+                                    class="btn btn-secondary">GitHub Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title">Online Banking Operation</h3>
+                                <p class="card-text">Online Banking System leveraging Spring Boot, Thymeleaf, Hibernate
+                                    ORM, and MySQL technologies to deliver a robust
+                                    financial platform.
+                                </p>
+                                <ul>
+                                    <li>TECHNOLOGY USED : SPRING BOOT ORM(HIBERNATE) THYMLEAF MYSQL</li>
+                                </ul>
+
+                                <a href="https://github.com/Rnarayan1/online-banking-operation" target="_blank"
+                                    class="btn btn-secondary">GitHub Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title">Supply Chain management</h3>
+                                <p class="card-text">This project shows the flow of product from manufacturing
+                                    period to retailing period .From this portal a user can monitor
+                                    their product quantity, calculation of money and can see the
+                                    transaction history of product and money.</p>
+                                <ul>
+                                    <li>TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY PHP MYSQL</li>
+
+                                </ul>
+
+                                <a href="https://github.com/Rnarayan1/project_s.c.m_bakery_product" target="_blank"
+                                    class="btn btn-secondary">GitHub Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title">Professional Nursing System</h3>
+                                <p class="card-text">Project provides certified nurse in service by the
+                                    requirement of the client.Different
+                                    facility provided through this portal like home care,
+                                    Physiotherapy and rehab, In-patient rehab and care and many more.
+                                </p>
+                                <ul>
+                                    <li>Key features or technologies used</li>
+                                    <li>Challenges you faced and how you overcame them</li>
+                                </ul>
+                                <a href="http://pnsindia.in/" target="_blank" class="btn btn-primary">Live Demo</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title">District Employement Exchange</h3>
+                                <p class="card-text">District Employment Exchange system, enabling job seekers to
+                                    register, search, and apply for jobs, while admins manage vacancies. It focuses on
+                                    user registration, profile management, job search, and admin tasks. Emphasizing
+                                    performance, security, usability, and reliability, it ensures an efficient and
+                                    user-friendly experience.</p>
+                                <ul>
+                                    <li>TECHNOLOGY USED : HTML CSS ANGULAR SPRING-BOOT HIBERNATE MYSQL</li>
+
+                                </ul>
+
+                                <a href="https://github.com/Rnarayan1/dee-District-Employement-Exchange-"
+                                    target="_blank" class="btn btn-secondary">GitHub Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-5 gradient-bg text-white">
+            <div class="container">
+                <h2 class="text-center mb-4">Experience</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4 bg-transparent border-light">
+                            <div class="card-body">
+                                <h3 class="card-title">Associate Software Engineer</h3>
+                                <p class="card-text">Tech Mahindra | 26.03.2024 - Continuing..</p>
+                                <ul>
+                                    <!-- <li>Key responsibility or achievement</li>
+                                    <li>Another responsibility or achievement</li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more experience sections as needed -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Get in Touch</h2>
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-bg text-white py-3">
         <div class="container">
-            <h2 class="display-6 text-center mb-5">Internship/Training</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Java Full Stack Developer Intern</h3>
-                    <p>
-                        Company: Nirmalaya labs pvt. ltd<br>
-                        Duration: jan 2022 - jul 2022
-                    </p>
+                    <p>&copy; RAJAN</p>
                 </div>
-                <div class="col-md-6">
-                    <!-- Add more internship details if needed -->
-                    <h3>Java Full Stack Developer Trainee</h3>
-                    <p>
-                        Company: OUPP (Odisha Upskilling Training Placement and Program )<br>
-                        Duration: sept 2023 - mar 2023 <br>
-                        Training Partner: Tech Mahindra
-                    </p>
+                <div class="col-md-6 text-end">
+                    <ul class="list-inline mb-0">
+
+                        <li class="list-inline-item">
+                            <!-- <i class="fas fa-envelope"></i> -->
+                            <span><a href="mailto:rajendranarayan716@gmail.com" class="text-white"><i
+                                        class="fas fa-envelope"></i></a></span>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <!-- <i class="fas fa-phone"></i> -->
+                            <span><a href="tel:+919938800716" class="text-white"><i class="fas fa-phone"></i></a></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <!-- <i class="fab fa-whatsapp"></i> -->
+                            <span><a href="https://wa.me/919938800716?text=Hello%20from%20my%20portfolio"
+                                    target="_blank" rel="noopener noreferrer" class="text-white"><i
+                                        class="fab fa-whatsapp"></i></a></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <!-- <i class="fab fa-github"></i> -->
+                            <span><a href="https://github.com/Rnarayan1" target="_blank" rel="noopener noreferrer"
+                                    class="text-white"><i class="fab fa-github"></i></a></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <!-- <i class="fab fa-instagram"></i> -->
+                            <span><a href="https://www.instagram.com/__mr.rajendra_/" target="_blank"
+                                    rel="noopener noreferrer" class="text-white"><i
+                                        class="fab fa-instagram"></i></a></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <!-- <i class="fab fa-linkedin"></i> -->
+                            <span><a href="https://www.linkedin.com/in/rajendra-narayan-sahoo-860a651bb" target="_blank"
+                                    rel="noopener noreferrer" class="text-white"><i
+                                        class="fab fa-linkedin"></i></a></span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 
-
-    <!-- Projects Section -->
-    <section id="projects" class="bg-light py-5">
-        <div class="container">
-            <h2 class="display-6 text-center mb-5">Projects</h2>
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Supply Chain management</h5>
-                            <p class="card-text">TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY PHP MYSQL</p>
-                            <a href="https://github.com/Rnarayan1/project_s.c.m_bakery_product" target="_blank"
-                                class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Restaurant Reservation</h5>
-                            <p class="card-text">TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY JSP SERVLET JDBC MYSQL</p>
-                            <a href="https://github.com/Rnarayan1/Restaurant-Reservation" target="_blank"
-                                class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Online Banking Operation</h5>
-                            <p class="card-text">TECHNOLOGY USED : SPRING BOOT ORM(HIBERNATE) THYMLEAF MYSQL</p>
-                            <a href="https://github.com/Rnarayan1/online-banking-operation" target="_blank"
-                                class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Professional Nursing System</h5>
-                            <p class="card-text">TECHNOLOGY USED : HTML CSS JAVASCRIPT JQUERY </p>
-                            <a href="https://pnsindia.in/" target="_blank" class="btn btn-primary mt-auto">View
-                                Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5">
-        <div class="container">
-            <h2 class="display-6 text-center mb-5">Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Programming Languages</h5>
-                            <ul>
-                                <li>Java</li>
-                                <li>JavaScript</li>
-                                <li>C</li>
-                                <li>Web base technology (Html Css)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Frameworks</h5>
-                            <ul>
-                                <li>Spring Boot</li>
-                                <li>Angular</li>
-                                <li>Bootstrap</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Tools</h5>
-                            <ul>
-                                <li>Git</li>
-                                <li>sts4</li>
-                                <li>Eclipse</li>
-                                <li>Postman</li>
-                                <li>Visual Studio Code</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-<!-- Contact Section -->
-<section id="contact" class="bg-dark text-white py-5">
-    <div class="container">
-        <h2 class="display-6 text-center mb-5">Contact</h2>
-        <ul class="list-unstyled text-center">
-            <li>
-                <i class="fas fa-envelope"></i>
-                <span><a href="mailto:rajendranarayan716@gmail.com" class="text-white">rajendranarayan716@gmail.com</a></span>
-            </li>
-            <li>
-                <i class="fas fa-phone"></i>
-                <span><a href="tel:+919938800716" class="text-white">+91 9938800716</a></span>
-            </li>
-            <li>
-                <i class="fab fa-whatsapp"></i>
-                <span><a href="https://wa.me/919938800716?text=Hello%20from%20my%20portfolio" target="_blank" rel="noopener noreferrer" class="text-white">Chat on WhatsApp</a></span>
-            </li>
-            <li>
-                <i class="fab fa-github"></i>
-                <span><a href="https://github.com/Rnarayan1" target="_blank" rel="noopener noreferrer" class="text-white">github.com/Rnarayan1</a></span>
-            </li>
-            <li>
-                <i class="fab fa-instagram"></i>
-                <span><a href="https://www.instagram.com/__mr.rajendra_/" target="_blank" rel="noopener noreferrer" class="text-white">__mr.rajendra_</a></span>
-            </li>
-            <li>
-                <i class="fab fa-linkedin"></i>
-                <span><a href="https://www.linkedin.com/in/rajendra-narayan-sahoo-860a651bb" target="_blank" rel="noopener noreferrer" class="text-white">Rajendra Narayan Sahoo</a></span>
-            </li>
-        </ul>
-    </div>
-</section>
-
-
-
-    <!-- Bootstrap JS and Optional Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
